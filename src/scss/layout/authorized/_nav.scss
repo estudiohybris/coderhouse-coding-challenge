@@ -1,0 +1,112 @@
+@import "../../abstracts/abstracts-module";
+
+.nav__container {
+    background-color: $black;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: $modal-lg;
+    display: none;
+    z-index: $zindex-modal;
+    flex-direction: column;
+    padding: $spacer $spacer * 8 $spacer * 8;
+    justify-content: space-between;
+    overflow: overlay;
+    box-shadow: $box-shadow;
+
+    ul.list-unstyled {
+        & > li > a {
+            color: $white;
+            font-size: $font-size-base * 4;
+            font-weight: $headings-font-weight;
+            &::before{
+                content: "";
+                background-color: $primary;
+                width: $spacer;
+                height: $spacer;
+                border-radius: 50%;
+                position: absolute;
+                left: -4rem;
+                top: calc(50% - 0.5rem);
+                transition: $transition-base;
+                display: none;
+            }
+            &:hover {
+                transition: $transition-base;
+                &::before {
+                    left: -2rem;
+                    display: block;
+                    transition: $transition-base;
+                }
+            }
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+
+    .close {
+        color: $white;
+        transition: $transition-base;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        span {
+            font-size: $font-size-base * 4;
+            opacity: 1;
+        }
+    }
+
+    .nav__button--primary,
+    .nav__button--secondary {
+        background-color: $white;
+        width: $spacer * 3;
+        height: $spacer * 3;
+        border-radius: 50%;
+        margin-right: $spacer * 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__button--primary {
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    .nav__button--secondary {
+        margin-right: 0;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+
+}
+
+.nav__container--empty {
+    display: none;
+    background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+    width: 150vw;
+    height: 150vw;
+    position: fixed;
+    margin-top: -25vh;
+    margin-left: -25vw;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom right;
+    overflow: visible;
+    z-index: $zindex-modal-backdrop;
+}
+
+@include media-breakpoint-down(sm) {
+    .nav__container {
+        width: 100vw;
+        padding: $spacer $spacer * 4 $spacer * 4;
+    }
+    .nav__container--empty {
+        display: none;
+    }
+}

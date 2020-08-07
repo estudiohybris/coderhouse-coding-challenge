@@ -1,0 +1,28 @@
+@import "../abstracts/abstracts-module";
+
+.modal {
+	padding-right: 0 !important;
+}
+
+.modal-header,
+.modal-footer {
+	padding: $spacer * 2;
+}
+
+.modal-header {
+	border-bottom: 1px solid $body;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.modal-footer {
+	border-top: 1px solid $body;
+}
+
+// Backdrop
+.modal-backdrop {
+	& + .modal-backdrop {
+		z-index: $zindex-modal;
+	}
+}

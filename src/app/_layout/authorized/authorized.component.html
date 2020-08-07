@@ -1,0 +1,231 @@
+<div class="sticky-top" id="header">
+    <div class="alert alert-black alert-dismissible fade show mb-0 text-center d-flex justify-content-center align-items-center" role="alert">
+        <strong class="text-white">Becas del 70% y cuotas sin interés en cursos y carreras.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <header class="navbar navbar-expand-lg navbar-light bg-white">
+        <a href="https://www.coderhouse.com/" class="navbar-brand mr-2">
+            <img src="./../../../assets/images/logo.svg" alt="coderhouse" height="45">
+        </a>
+        <ul class="list-unstyled d-flex flex-row mb-0 ml-auto">
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="p--2" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./../../../assets/images/flag-argentina.png" alt="Argentina" width="30" height="30">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-1" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-argentina.png" alt="Argentina" width="30" height="30">
+                            Argentina
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-chile.png" alt="Chile" width="30" height="30">
+                            Chile
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-colombia.png" alt="Colombia" width="30" height="30">
+                            Colombia
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-eeuu.png" alt="Estados Unidos" width="30" height="30">
+                            Estados Unidos
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-peru.png" alt="Perú" width="30" height="30">
+                            Perú
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                            <img class="mr-1" src="./../../../assets/images/flag-uruguay.png" alt="Uruguay" width="30" height="30">
+                            Uruguay
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0)" class="ml-1 p--2" (click)="showMenu(true)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22"><g transform="translate(1 1)"><line x1="20" transform="translate(5 10)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M28,0H3" transform="translate(-3)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/><line x1="14" transform="translate(11 20)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
+                </a>
+            </li>
+        </ul>
+    </header>
+</div>
+
+<nav class="nav__container" [ngClass]="{'d-flex': showMenuFlag}">
+    <div>
+        <div class="d-flex justify-content-end">
+            <a href="javascript:void(0)" class="close" (click)="showMenu(false)">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+                <a href="javascript:void(0)" (click)="showMenu(false)">
+                    Inicio
+                </a>
+            </li>
+            <li class="mb-1">
+                <a href="javascript:void(0)" class="active" (click)="showMenu(false)">
+                    Cursos online
+                </a>
+            </li>
+            <li class="mb-1">
+                <a href="javascript:void(0)" (click)="showMenu(false)">
+                    Comunidad
+                </a>
+            </li>
+            <li class="mb-1">
+                <a href="javascript:void(0)" (click)="showMenu(false)">
+                    Coderhouse
+                </a>
+            </li>
+        </ul>
+        <hr class="border-top border-primary">
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="javascript:void(0)" (click)="showMenu(false)">
+                    Plataforma
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between mt-4">
+        <div class="d-flex flex-column align-items-center align-items-sm-start">
+            <h4 class="text-white mb-2">¡Seguinos!</h4>
+            <div class="d-flex flex-row">
+                <a href="javascript:void(0)" class="nav__button--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.347" height="16" viewBox="0 0 22.347 16"><g transform="translate(0.5 0.5)"><path d="M21.9,6.348a2.7,2.7,0,0,0-1.882-1.94C18.348,4,11.673,4,11.673,4S5,4,3.329,4.446a2.7,2.7,0,0,0-1.882,1.94A28.137,28.137,0,0,0,1,11.519a28.137,28.137,0,0,0,.446,5.171,2.7,2.7,0,0,0,1.882,1.863C5,19,11.673,19,11.673,19s6.675,0,8.344-.446a2.7,2.7,0,0,0,1.882-1.94,28.137,28.137,0,0,0,.446-5.094A28.138,28.138,0,0,0,21.9,6.348Z" transform="translate(-0.999 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M9.75,14.56l5.75-3.04L9.75,8.48Z" transform="translate(-1.352 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="nav__button--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g transform="translate(-12.5 -12.5)"><rect width="20" height="20" rx="5" transform="translate(13 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M16,11.37A4,4,0,1,1,12.63,8,4,4,0,0,1,16,11.37Z" transform="translate(11 11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line transform="translate(28.5 17.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="nav__button--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g transform="translate(-12.5 -12.5)"><path d="M16,8a6,6,0,0,1,6,6v7H18V14a2,2,0,0,0-4,0v7H10V14a6,6,0,0,1,6-6Z" transform="translate(11 11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect width="4" height="12" transform="translate(13 20)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><circle cx="2" cy="2" r="2" transform="translate(13 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="nav__button--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g transform="translate(0.5 0.5)"><path d="M4,11a9,9,0,0,1,9,9" transform="translate(-4 -5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M4,4A15,15,0,0,1,19,19" transform="translate(-4 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><circle cx="1" cy="1" r="1" transform="translate(0 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <h4 class="text-white mt-4 mt-sm-0 mb-2">¡Estamos online!</h4>
+            <a href="javascript:void(0)" class="nav__button--secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g transform="translate(-14.5 -14.5)"><g transform="translate(15 15)"><path d="M18,10.083a6.983,6.983,0,0,1-.75,3.167,7.083,7.083,0,0,1-6.333,3.917,6.983,6.983,0,0,1-3.167-.75L3,18l1.583-4.75a6.983,6.983,0,0,1-.75-3.167A7.083,7.083,0,0,1,7.75,3.75,6.983,6.983,0,0,1,10.917,3h.417A7.067,7.067,0,0,1,18,9.667Z" transform="translate(-3 -3)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g><g transform="translate(20 20)"><path d="M7.1,5.743V6.5a.5.5,0,0,1-.547.5,4.965,4.965,0,0,1-2.165-.77A4.893,4.893,0,0,1,2.884,4.722a4.965,4.965,0,0,1-.77-2.175A.5.5,0,0,1,2.613,2h.753a.5.5,0,0,1,.5.432,3.222,3.222,0,0,0,.176.705.5.5,0,0,1-.113.529l-.319.319A4.014,4.014,0,0,0,5.117,5.49l.319-.319a.5.5,0,0,1,.529-.113,3.222,3.222,0,0,0,.705.176.5.5,0,0,1,.432.509Z" transform="translate(-2.112 -2)"/></g></g></svg>
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="nav__container--empty" [ngClass]="{'d-flex': showMenuFlag}" (click)="showMenu(false)"></div>
+
+<section class="p-0">
+    <router-outlet></router-outlet>
+</section>
+
+<a href="javascript:void(0)" class="btn btn-secondary text-white fab--right rounded-circle" style="right: 6rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g transform="translate(-14.5 -14.5)"><g transform="translate(15 15)"><path d="M18,10.083a6.983,6.983,0,0,1-.75,3.167,7.083,7.083,0,0,1-6.333,3.917,6.983,6.983,0,0,1-3.167-.75L3,18l1.583-4.75a6.983,6.983,0,0,1-.75-3.167A7.083,7.083,0,0,1,7.75,3.75,6.983,6.983,0,0,1,10.917,3h.417A7.067,7.067,0,0,1,18,9.667Z" transform="translate(-3 -3)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g><g transform="translate(20 20)"><path d="M7.1,5.743V6.5a.5.5,0,0,1-.547.5,4.965,4.965,0,0,1-2.165-.77A4.893,4.893,0,0,1,2.884,4.722a4.965,4.965,0,0,1-.77-2.175A.5.5,0,0,1,2.613,2h.753a.5.5,0,0,1,.5.432,3.222,3.222,0,0,0,.176.705.5.5,0,0,1-.113.529l-.319.319A4.014,4.014,0,0,0,5.117,5.49l.319-.319a.5.5,0,0,1,.529-.113,3.222,3.222,0,0,0,.705.176.5.5,0,0,1,.432.509Z" transform="translate(-2.112 -2)"/></g></g></svg>
+</a>
+
+<a href="#header" class="btn btn-white fab--right rounded-circle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16.414" height="8.707" viewBox="0 0 16.414 8.707"><g transform="translate(0.707 0.5)"><path d="M21,16.5,13.5,9,6,16.5" transform="translate(-6 -9)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+</a>
+
+<footer class="container-fluid bg-black">
+    <div class="row pt-6 pb-5">
+        <div class="col-12 col-lg-2 offset-lg-1 text-center text-lg-left">
+            <h4 class="text-white mb-2">Cursos</h4>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Diseño</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Marketing</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Programación</a></li>
+                <li class="mb-0"><a class="text-white" href="javascript:void(0)">Producto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 text-center text-lg-left mt-4 mt-lg-0">
+            <h4 class="text-white mb-2">Carreras</h4>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Marketing Digital</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Diseño UX/UI</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Desarrollo UX/UI</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Desarrollo Front End</a></li>
+                <li class="mb-0"><a class="text-white" href="javascript:void(0)">Producto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 text-center text-lg-left mt-4 mt-lg-0">
+            <h4 class="text-white mb-2">Conocenos</h4>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Nuestra Historia</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Equipo</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Trabaja con nosotros</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Prensa</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">ONGs</a></li>
+                <li class="mb-0"><a class="text-white" href="javascript:void(0)">Empresas</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 text-center text-lg-left mt-4 mt-lg-0">
+            <h4 class="text-white mb-2">Coders</h4>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Plataforma</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Profesores</a></li>
+                <li class="mb-1"><a class="text-white" href="javascript:void(0)">Convertite en profesor</a></li>
+                <li class="mb-0"><a class="text-white" href="javascript:void(0)">Testimonios</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-2 text-center text-lg-left mt-4 mt-lg-0">
+            <h4 class="text-white mb-2">Contáctanos</h4>
+            <div class="d-inline-flex flex-row flex-lg-column flex-xl-row">
+                <a href="javascript:void(0)" class="footer__button--primary mb--2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.347" height="16" viewBox="0 0 22.347 16"><g transform="translate(0.5 0.5)"><path d="M21.9,6.348a2.7,2.7,0,0,0-1.882-1.94C18.348,4,11.673,4,11.673,4S5,4,3.329,4.446a2.7,2.7,0,0,0-1.882,1.94A28.137,28.137,0,0,0,1,11.519a28.137,28.137,0,0,0,.446,5.171,2.7,2.7,0,0,0,1.882,1.863C5,19,11.673,19,11.673,19s6.675,0,8.344-.446a2.7,2.7,0,0,0,1.882-1.94,28.137,28.137,0,0,0,.446-5.094A28.138,28.138,0,0,0,21.9,6.348Z" transform="translate(-0.999 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M9.75,14.56l5.75-3.04L9.75,8.48Z" transform="translate(-1.352 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="footer__button--primary mb--2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g transform="translate(-12.5 -12.5)"><rect width="20" height="20" rx="5" transform="translate(13 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M16,11.37A4,4,0,1,1,12.63,8,4,4,0,0,1,16,11.37Z" transform="translate(11 11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line transform="translate(28.5 17.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="footer__button--primary mb--2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g transform="translate(-12.5 -12.5)"><path d="M16,8a6,6,0,0,1,6,6v7H18V14a2,2,0,0,0-4,0v7H10V14a6,6,0,0,1,6-6Z" transform="translate(11 11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect width="4" height="12" transform="translate(13 20)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><circle cx="2" cy="2" r="2" transform="translate(13 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="footer__button--primary mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g transform="translate(0.5 0.5)"><path d="M4,11a9,9,0,0,1,9,9" transform="translate(-4 -5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><path d="M4,4A15,15,0,0,1,19,19" transform="translate(-4 -4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><circle cx="1" cy="1" r="1" transform="translate(0 13)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
+                </a>
+            </div>
+            <img src="./../../../assets/images/hashtag.png" alt="#APRENDECODER" class="img-fluid mt-2" height="60">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr class="border-top border-primary"/>
+        </div>
+        <div class="col-12 col-xl-4 text-center text-xl-left mb-1 order-2 order-xl-1 mt-2 mt-xl-0">
+            <img class="mr-1" src="./../../../assets/images/logoGrey.svg" alt="coderhouse" height="30">
+            <small class="text-white">© 2020 - Todos los derechos reservados</small>
+        </div>
+        <div class="col-12 col-xl-8 d-flex flex-row order-1 order-xl-2 justify-content-center">
+            <ul class="list-unstyled d-inline-flex mb-0">
+                <li class="text-center mb-1 pl-1">
+                    <a href="javascript:void(0)" class="text-white" (click)="showMenu(false)">
+                        ¡Estamos contratando!
+                    </a>
+                </li>
+                <li class="text-center mb-1 pl-1">
+                    <a href="javascript:void(0)" class="text-white" (click)="showMenu(false)">
+                        Sobre Coder
+                    </a>
+                </li>
+                <li class="text-center mb-1 pl-1">
+                    <a href="javascript:void(0)" class="text-white" (click)="showMenu(false)">
+                        Términos y condiciones
+                    </a>
+                </li>
+                <li class="text-center mb-1 pl-1">
+                    <a href="javascript:void(0)" class="text-white" (click)="showMenu(false)">
+                        Políticas de privacidad
+                    </a>
+                </li>
+                <li class="text-center mb-1 pl-1">
+                    <a href="javascript:void(0)" class="text-white" (click)="showMenu(false)">
+                        Política de cookies
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+@import "../abstracts/abstracts-module";
+
+.dropdown {
+
+  .dropdown-menu {
+    background-color: $white;
+  }
+
+  .dropdown-item {
+    &.disabled {
+      opacity: $disabled-opacity;
+    }
+  }
+
+  .dropdown-divider {
+    margin-left: $spacer;
+    margin-right: $spacer;
+    border-top-color: $body;
+  }
+
+}

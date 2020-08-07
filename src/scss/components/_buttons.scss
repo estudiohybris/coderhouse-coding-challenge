@@ -1,0 +1,100 @@
+@import "../abstracts/abstracts-module";
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
+    color: $white;
+    &:hover,
+    &:active {
+      background-color: lighten($color, $theme-color-interval);
+      border-color: transparent;
+    }
+    &.disabled,
+    &:disabled {
+      color: $white;
+    }
+  }
+  .btn-outline-#{$name} {
+    &:hover,
+    &:active {
+      background-color: $white;
+      color: $color;
+      border-color: lighten($color, $theme-color-interval);
+      & > *[class*="text-"] {
+        color: $white !important;
+      }
+    }
+    &.disabled {
+      &:hover {
+        border: 1px solid $color !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.btn-warning {
+  color: darken($warning, 30%);
+  &:hover,
+  &:active {
+    color: darken($warning, 30%);
+  }
+}
+
+// Fab
+*[class*="fab"] {
+  padding: 0.684rem;
+  position: fixed;
+  bottom: $spacer * 2;
+  z-index: $zindex-fab;
+}
+
+.fab--left {
+  left: $spacer * 2;
+  height: $spacer * 3;
+  width: $spacer * 3;
+  padding: 0;
+}
+
+.fab--right {
+  right: $spacer * 2;
+  height: $spacer * 3;
+  width: $spacer * 3;
+  padding: 0;
+}
+
+// Close
+.alert,
+.toast {
+
+  .close {
+    color: $white;
+    line-height: 1;
+    margin-left: $spacer;
+    opacity: 1;
+  }
+
+  .close:not(:disabled):not(.disabled):hover {
+    color: $white;
+    opacity: 1;
+  }
+
+  .close:not(:disabled):not(.disabled):focus {
+    outline: none !important;
+  }
+
+}
+
+.modal-header {
+
+  .close {
+		padding: $spacer 0 $spacer * 2 0;
+  }
+
+}
